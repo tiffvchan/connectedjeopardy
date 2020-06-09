@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import "./Category.scss";
-import whitelogo from "../../assets/img/brainstation-white.png";
+import whitelogo from "../../assets/img/connected/ConnectedLogoWhite.png";
 
 const Category = ({ category, addToRevealed, currGame }) => {
   const [flipped, setFlipped] = useState(false);

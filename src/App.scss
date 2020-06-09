@@ -28,6 +28,10 @@ button {
     color: $white;
     text-align: center;
     margin: $spacing-med 0;
+    cursor: pointer;
+    &--active {
+      animation: rainbow-font 1s 0.5s infinite;
+    }
   }
   &__cards {
     display: flex;

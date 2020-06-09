@@ -4,6 +4,7 @@ import Category from "./components/Category/Category";
 import FinalJeopardy from "./components/FinalJeopardy/FinalJeopardy";
 import Scoreboard from "./components/Scoreboard/Scoreboard";
 import ButtonSwitchGame from "./components/ButtonSwitchGame/ButtonSwitchGame";
+import whitelogo from "./assets/img/connected/ConnectedLogoWhite.png";
 import data from "./data/data";
 import dataAlt from "./data/dataAlt";
 import dataAlt2 from "./data/dataAlt2";
@@ -53,7 +54,6 @@ function App() {
   };
 
   useEffect(() => {
-    setPlayIntro(true);
     setNewGame(0);
   }, []);
 
@@ -65,9 +65,19 @@ function App() {
     setFinalJeopardyStatus(!finalJeopardyStatus);
   };
 
+  const handlesMusicClick = () => {
+    setPlayIntro(!playIntro);
+  };
+
   return (
     <div className="app">
-      <h1 className="app__heading">Jeopardy!</h1>
+      {playIntro && <audio autoplay="autoplay" src={introMusic}></audio>}
+      <h1
+        className={`app__heading ${playIntro ? "app__heading--active" : ""}`}
+        onClick={handlesMusicClick}
+      >
+        Jeopardy!
+      </h1>
       {finalJeopardyStatus === true ? (
         <FinalJeopardy finalJeopardyQ={finalJepQ} />
       ) : (
@@ -86,7 +96,6 @@ function App() {
       )}
 
       <Scoreboard />
-      {playIntro && <audio autoplay="autoplay" src={introMusic}></audio>}
       <div className="app__games">
         {gameData.map((game, i) => {
           return (

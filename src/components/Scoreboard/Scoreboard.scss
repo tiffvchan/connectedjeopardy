@@ -11,6 +11,9 @@
   @include desktop {
     width: 65vw;
   }
+  @include lg-desktop {
+    width: 90vw;
+  }
   &__reset {
     position: absolute;
     bottom: 5px;

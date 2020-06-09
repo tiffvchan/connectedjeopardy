@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import logo from "../../assets/img/brainstation.png";
+import logo from "../../assets/img/connected/ConnectedLogoBlue.png";
 import "./CardModal.scss";
 import CardTimer from "../CardTimer/CardTimer";
 import dailydoubleimg from "../../assets/img/dailydouble.png";

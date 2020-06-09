@@ -19,6 +19,12 @@
   }
 }
 
+@mixin lg-desktop {
+  @media screen and (min-width: $lg-desktop){
+    @content;
+  }
+}
+
 @mixin link-reset {
   list-style-type: none;
   text-decoration: none;
@@ -146,4 +152,20 @@
   from {
     transform: scale3d(0, 1, 1);
   }
+}
+
+@keyframes rainbow-font {
+  0%     { color: #ff0000; }
+8.333%     { color: #ff8000; }
+16.667%     { color: #ffff00; }
+25.000%     { color: #80ff00; }
+33.333%     { color: #00ff00; }
+41.667%     { color: #00ff80; }
+50.000%     { color: #00ffff; }
+58.333%     { color: #0080ff; }
+66.667%     { color: #0000ff; }
+75.000%     { color: #8000ff; }
+83.333%     { color: #ff00ff; }
+91.667%     { color: #ff0080; }
+100.00%     { color: #ff0000; }
 }

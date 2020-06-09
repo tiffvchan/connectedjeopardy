@@ -7,10 +7,15 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  @include desktop {
+      // made cards wider to fit logo
+    width: 175px;
+  }
   &__image {
     width: 150px;
     height: 100px;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 0 10px;
   }
   &--front {
     @include front-card-text;

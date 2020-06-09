@@ -11,14 +11,17 @@
     text-transform: uppercase;
     width: 150px;
     height: 100px;
+    @include desktop {
+      // made cards wider to fit logo
+      width: 175px;
+    }
   }
   &__name {
     text-align: center;
   }
   &__name-img {
-
-    width: 100px;
+    width: 125px;
     height: 85px;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
