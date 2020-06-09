@@ -45,6 +45,7 @@ button {
   &__button-finaljep {
     @include button-secondary;
     margin-top: $spacing-med;
+    padding: 0 $spacing-sm;
     background-color: $brainstation-blue;
     color: white;
   }
