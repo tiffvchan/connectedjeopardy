@@ -62,7 +62,7 @@ const dataAlt3 = [
       },
       {
         points: 500,
-        question: "OK is the two digit state abbreviation for this US State",
+        question: "OK is the two letter state abbreviation for this US State",
         answer: "Oklahoma",
       },
     ],

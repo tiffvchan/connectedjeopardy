@@ -62,7 +62,7 @@ const dataAlt2 = [
       },
       {
         points: 500,
-        question: "What flavours the liquor Chambord",
+        question: "This flavours the liquor Chambord",
         answer: "Raspberries",
       },
     ],
