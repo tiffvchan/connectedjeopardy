@@ -4,7 +4,6 @@ import Category from "./components/Category/Category";
 import FinalJeopardy from "./components/FinalJeopardy/FinalJeopardy";
 import Scoreboard from "./components/Scoreboard/Scoreboard";
 import ButtonSwitchGame from "./components/ButtonSwitchGame/ButtonSwitchGame";
-import whitelogo from "./assets/img/connected/ConnectedLogoWhite.png";
 import data from "./data/data";
 import dataAlt from "./data/dataAlt";
 import dataAlt2 from "./data/dataAlt2";
@@ -23,6 +22,7 @@ function App() {
   const [playIntro, setPlayIntro] = useState(false);
   const [finalJepQ, setFinalJepQ] = useState(finaljep[0]);
   const [currGame, setCurrGame] = useState(null);
+  const [gameIndex, setGameIndex] = useState({});
 
   const addToRevealed = () => {
     const newlyRevealed = [...revealed, revealed.length + 1];
@@ -37,13 +37,19 @@ function App() {
     // setPlayIntro(false);
     let quest = {};
     let counter = 0;
-    do {
-      quest = gameData[num][getRandomInt()].questions[getRandomInt()];
-      if (!quest["dailydouble"]) {
-        quest["dailydouble"] = true;
-        counter++;
-      }
-    } while (counter < 2);
+
+    if (!gameIndex[num]) {
+      do {
+        quest = gameData[num][getRandomInt()].questions[getRandomInt()];
+        if (!quest["dailydouble"]) {
+          quest["dailydouble"] = true;
+          counter++;
+        }
+      } while (counter < 2);
+    }
+
+    let thing = {};
+    thing[num] = true;
 
     // reset state variables
     setRevealed([]);
@@ -51,6 +57,7 @@ function App() {
     setCategories(gameData[num]);
     setFinalJepQ(finaljep[num]);
     setCurrGame(num);
+    setGameIndex({ ...gameIndex, ...thing });
   };
 
   useEffect(() => {

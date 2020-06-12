@@ -1,14 +1,47 @@
 @import "../../styles/base";
 
 .buttonswitchgame {
-  @include button-secondary;
-  width: 100px;
-  background: black;
-  border: 2px solid $yellow;
-  color: $yellow;
-  cursor: pointer;
-  &:hover, &__activeGame {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  &:hover .buttonswitchgame__double,
+  &__activeGame .buttonswitchgame__double {
+    background: black;
+    color: $yellow;
+  }
+  &__button{
+    @include button-secondary;
+    margin: 0;
+    height: 45px;
+    width: 110px;
+    background: black;
+    border: 2px solid $yellow;
+    color: $yellow;
+    cursor: pointer;
+    &:hover {
+      background: $yellow;
+      color: black;
+    }
+  }
+  &__activeGame {
     background: $yellow;
     color: black;
   }
+  &__double {
+    @include flex-center-column;
+    position: absolute;
+    font-weight: 700;
+    top: 4px;
+    right: -12px;
+    width: 48px;
+    height: 12px;
+    text-align: center;
+    font-size: 10px;
+    color: black;
+    background-color: $yellow; 
+    transform: rotate(40deg);
+    pointer-events: none;
+  }
+
 }
+
