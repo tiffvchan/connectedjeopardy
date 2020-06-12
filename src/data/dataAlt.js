@@ -88,7 +88,7 @@ const dataAlt = [
       },
       {
         points: 1000,
-        question: "A 400th anniversary",
+        question: "A 200th anniversary",
         answer: "A Bicentennial",
       },
     ],
