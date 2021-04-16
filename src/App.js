@@ -12,6 +12,7 @@ import dataAlt4 from "./data/dataAlt4";
 import dataAlt5 from "./data/dataAlt5";
 import finaljep from "./data/finaljep";
 import introMusic from "./assets/music/intro.mp3";
+import watermelon from "./assets/img/watermelon.png";
 
 const gameData = [data, dataAlt, dataAlt2, dataAlt3, dataAlt4, dataAlt5];
 
@@ -62,6 +63,7 @@ function App() {
 
   useEffect(() => {
     setNewGame(0);
+    // eslint-disable-next-line
   }, []);
 
   const handlesClick = (num) => {
@@ -79,12 +81,16 @@ function App() {
   return (
     <div className="app">
       {playIntro && <audio autoplay="autoplay" src={introMusic}></audio>}
-      <h1
-        className={`app__heading ${playIntro ? "app__heading--active" : ""}`}
-        onClick={handlesMusicClick}
-      >
-        Jeopardy!
-      </h1>
+      <div className="app__heading-wrap">
+        <h1
+          className={`app__heading ${playIntro ? "app__heading--active" : ""}`}
+          onClick={handlesMusicClick}
+        >
+          Jeopardy!
+        </h1>
+        <img className="app__heading-img" src={watermelon} alt="watermelon" />
+
+      </div>
       {finalJeopardyStatus === true ? (
         <FinalJeopardy finalJeopardyQ={finalJepQ} />
       ) : (

@@ -35,35 +35,35 @@ const dataAlt2 = [
     ],
   },
   {
-    category: "Can I start you with some drinks?",
+    category: "Newly Connected",
     questions: [
       {
         points: 100,
         question:
-          "This classic tomato juice & vodka cocktail is often used as a hangover remedy",
-        answer: "A bloody mary/caesar",
+          "This fictional character from the MTV animated series Beavis and Butt-Head was so popular in the 90’s she got her own spin-off show",
+        answer: "Daria",
       },
       {
         points: 200,
         question:
-          "A New Orleans specialty a Hurricane traditionally contains both the dark & light types of this",
-        answer: "Rum",
+          "Public Relations, Permanent Residency, and Press Release - the acronyms for these are the initials of this new Kensington.",
+        answer: "Prashanth Reddy",
       },
       {
         points: 300,
-        question: "The birthplace of bourbon",
-        answer: "Kentucky",
+        question:
+          "She’s one of the newest Kensington recruits that does recruiting full time for Connected.",
+        answer: "Katyayni",
       },
       {
         points: 400,
-        question:
-          "Venice is the birthplace of this cocktail made with 2 parts Prosecco & one part peach puree",
-        answer: "A Bellini",
+        question: "First name of the leading co-stars in The Wedding Planner",
+        answer: "Matthew and Jennifer",
       },
       {
         points: 500,
-        question: "This flavours the liquor Chambord",
-        answer: "Raspberries",
+        question: "Instead of acorns, this Chipmunk really likes Truffles and Oysters",
+        answer: "Sadra",
       },
     ],
   },
