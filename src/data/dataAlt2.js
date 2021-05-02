@@ -35,35 +35,35 @@ const dataAlt2 = [
     ],
   },
   {
-    category: "Newly Connected",
+    category: "Can I start you with some drinks?",
     questions: [
       {
         points: 100,
         question:
-          "This fictional character from the MTV animated series Beavis and Butt-Head was so popular in the 90’s she got her own spin-off show",
-        answer: "Daria",
+          "This classic tomato juice & vodka cocktail is often used as a hangover remedy",
+        answer: "A bloody mary/caesar",
       },
       {
         points: 200,
         question:
-          "Public Relations, Permanent Residency, and Press Release - the acronyms for these are the initials of this new Kensington.",
-        answer: "Prashanth Reddy",
+          "A New Orleans specialty a Hurricane traditionally contains both the dark & light types of this",
+        answer: "Rum",
       },
       {
         points: 300,
-        question:
-          "She’s one of the newest Kensington recruits that does recruiting full time for Connected.",
-        answer: "Katyayni",
+        question: "The birthplace of bourbon",
+        answer: "Kentucky",
       },
       {
         points: 400,
-        question: "First name of the leading co-stars in The Wedding Planner",
-        answer: "Matthew and Jennifer",
+        question:
+          "Venice is the birthplace of this cocktail made with 2 parts Prosecco & one part peach puree",
+        answer: "A Bellini",
       },
       {
         points: 500,
-        question: "Instead of acorns, this Chipmunk really likes Truffles and Oysters",
-        answer: "Sadra",
+        question: "This flavours the liquor Chambord",
+        answer: "Raspberries",
       },
     ],
   },
